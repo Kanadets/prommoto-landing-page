@@ -1,0 +1,197 @@
+@import "../../lib/colors";
+
+.earnMoneySection {
+  margin-top: 200px;
+  height: 400vh;
+  background-color: rgba(233, 235, 241, 0.32);
+  display: block;
+  padding: 0 50px;
+  padding-bottom: 226px;
+
+  .mainFixedBox {
+    position: sticky;
+    top: 91px;
+
+    margin: auto;
+    max-width: 1468.16px;
+    max-height: 811.25px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    .topTextBox {
+      text-align: center;
+
+      h2 {
+        font-weight: bold;
+        font-size: 60px;
+        line-height: 120%;
+        color: $carnation-color;
+        margin: 0;
+      }
+
+      p {
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 34px;
+        margin: 0;
+      }
+    }
+
+    .infoTextMainBox {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      position: relative;
+
+      .infoTextBox {
+        .InfoText {
+          max-width: 695px;
+          margin-bottom: 60px;
+          h3 {
+            cursor: default;
+            transition: all 0.2s ease-in-out;
+            font-weight: bold;
+            font-size: 58.3529px;
+            line-height: 70px;
+            margin: 0;
+            color: $pale-slate-color;
+          }
+
+          p {
+            cursor: default;
+            display: none;
+          }
+        }
+
+        .infoTextActive {
+          h3 {
+            color: #000;
+          }
+
+          p {
+            display: block;
+            font-weight: normal;
+            font-size: 28px;
+            line-height: 150%;
+            max-width: 600px;
+            margin: 0;
+
+            span {
+              font-weight: bold;
+              color: $carnation-color;
+            }
+          }
+        }
+
+        .getEarlyAccess {
+          position: relative;
+
+          span {
+            font-weight: 600;
+            font-size: 24.5375px;
+            line-height: 29px;
+            color: $pale-slate-color;
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 100;
+            transition: all 0.2s ease-in-out;
+            z-index: 2;
+            cursor: default;
+          }
+
+          button {
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 100;
+            transition: all 0.2s ease-in-out;
+            font-weight: bold;
+            font-size: 22.5865px;
+            line-height: 27px;
+            color: #fff;
+            cursor: pointer;
+            z-index: 2;
+            background-color: $carnation-color;
+            border: none;
+            border-radius: 33.8798px;
+            padding: 23px 37px;
+          }
+
+          .unActive {
+            opacity: 0;
+            z-index: 1;
+          }
+        }
+      }
+
+      .infoImgBox {
+        max-width: 629.16px;
+        max-height: 544.25px;
+        height: 100%;
+
+        img {
+          // width: 100%;
+          height: 100%;
+        }
+      }
+
+      .scrollController {
+        max-height: 450px;
+        height: 100%;
+        position: absolute;
+        max-width: 43px;
+        width: 100%;
+        right: -2%;
+
+        .scrollBar {
+          height: 33%;
+          width: 13px;
+          background-color: rgba(246, 85, 90, 0.1);
+          margin: 0 auto;
+
+          &:first-child {
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            border-bottom: 2px solid $carnation-color;
+          }
+
+          &:nth-child(3) {
+            border-top: 2px solid $carnation-color;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+          }
+        }
+
+        .scrollProgressBar {
+          // transition: all 0.1s ease-in-out;
+          position: absolute;
+          top: 0;
+          width: 13px;
+          background-color: $carnation-color;
+          min-height: 0%;
+          max-height: 100%;
+          left: 0;
+          right: 0;
+          margin: 0 auto;
+          border-radius: 5px;
+
+          span {
+            position: absolute;
+            bottom: -13px;
+            left: -7px;
+            background-color: $carnation-color;
+            border-radius: 99999px;
+            height: 20px;
+            width: 20px;
+            border: 4.2px solid #ffffff;
+          }
+        }
+      }
+    }
+  }
+}

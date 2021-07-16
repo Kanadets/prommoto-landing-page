@@ -1,0 +1,41 @@
+@import "../../lib/colors";
+
+.brandsIndividualsSection {
+  margin-top: 254px;
+  width: 100%;
+  position: relative;
+  height: 71vh;
+
+  img {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 100%;
+    z-index: -1;
+  }
+
+  .brandsIndividualsContainer {
+    width: 85%;
+    display: block;
+    margin: auto;
+    h2 {
+      margin: 0;
+      margin-bottom: 35px;
+      font-weight: bold;
+      font-size: 60px;
+      line-height: 120%;
+    }
+
+    p {
+      width: 70%;
+      margin: 0;
+      font-weight: normal;
+      font-size: 28px;
+      line-height: 150%;
+      color: $gray-color;
+    }
+  }
+}
