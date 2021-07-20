@@ -2,7 +2,7 @@
 
 .earnMoneySection {
   margin-top: 200px;
-  height: 400vh;
+  height: 450vh;
   background-color: rgba(233, 235, 241, 0.32);
   display: block;
   padding: 0 50px;
@@ -10,7 +10,7 @@
 
   .mainFixedBox {
     position: sticky;
-    top: 91px;
+    top: 40px;
 
     margin: auto;
     max-width: 1468.16px;
@@ -130,13 +130,15 @@
       }
 
       .infoImgBox {
-        max-width: 629.16px;
+        max-width: 779.16px;
         max-height: 544.25px;
         height: 100%;
+        display: inline-flex;
 
         img {
           // width: 100%;
           height: 100%;
+          margin: 0 auto;
         }
       }
 

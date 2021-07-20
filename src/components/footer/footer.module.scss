@@ -1,0 +1,124 @@
+@import "../../lib/colors";
+
+.footerSection {
+  max-height: 640px;
+  height: 100%;
+  padding: 250px 0;
+  position: relative;
+
+  .stayInLoop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    max-width: 865px;
+
+    input {
+      width: 90%;
+      padding: 35px 44px;
+      padding-right: 0;
+      font-weight: normal;
+      font-size: 27.7926px;
+      line-height: 33px;
+      color: $gray-color;
+      outline: none;
+      border: none;
+      border-radius: 46.9px;
+      filter: drop-shadow(0px 5px 24px rgba(0, 0, 0, 0.13));
+    }
+
+    button {
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      max-width: auto 0;
+      font-weight: bold;
+      font-size: 27.0409px;
+      line-height: 32px;
+      color: #fff;
+      background-color: $blue-ribbon-color;
+      padding: 32px 47px;
+      border: none;
+      border-radius: 46.9px;
+    }
+  }
+
+  .mainFooterDiv {
+    max-height: 213px;
+    max-width: 85%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .logoDiv {
+      p {
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 30px;
+        letter-spacing: 0.003em;
+      }
+      img {
+        max-width: 365px;
+      }
+    }
+
+    .contactFollowDiv {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      width: 40%;
+
+      .contactDiv {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        h4 {
+          margin: 0;
+          margin-bottom: 67px;
+          font-weight: bold;
+          font-size: 26.6722px;
+          line-height: 37px;
+        }
+
+        div {
+          p {
+            margin: 0;
+
+            &:last-child {
+              margin-top: 16px;
+            }
+          }
+        }
+      }
+
+      .followDiv {
+        h5 {
+          font-weight: bold;
+          font-size: 26.6722px;
+          line-height: 37px;
+          margin: 0;
+          margin-bottom: 67px;
+        }
+
+        .linksImgDiv {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-around;
+
+          img {
+            transition: all 0.2s ease-in-out;
+            cursor: pointer;
+            &:hover {
+              transform: scale(1.1);
+            }
+          }
+        }
+      }
+    }
+  }
+}

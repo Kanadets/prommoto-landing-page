@@ -20,7 +20,22 @@ import earnMoney1 from "assets/earnMoney1.svg";
 import earnMoney2 from "assets/earnMoney2.svg";
 import earnMoney3 from "assets/earnMoney3.png";
 
-const EarnMoney = () => {
+const EarnMoney = ({
+  headerText,
+  subHeaderText,
+  slide1MainText,
+  slide1MainSubText,
+  slide1Img,
+  slide2MainText,
+  slide2MainSubText,
+  slide2Img,
+  slide3MainText,
+  slide3MainSubText,
+  slide3Img,
+  mainColor,
+  subColor,
+  id,
+}) => {
   const [topPos, setTopPos] = useState(0);
   const [elemHeight, setElemHeight] = useState(0);
 
@@ -33,7 +48,7 @@ const EarnMoney = () => {
   // });
 
   useEffect(() => {
-    const scrollTopPos = document.getElementById("scrollEarnSection");
+    const scrollTopPos = document.getElementById(id);
     setTopPos(scrollTopPos.getBoundingClientRect().top - 505);
     setElemHeight(scrollTopPos.scrollHeight);
   }, []);
@@ -51,17 +66,13 @@ const EarnMoney = () => {
     }
   });
 
-  console.log(window.scrollY);
-
   return (
-    <section className={earnMoneySection} id="scrollEarnSection">
+    <section className={earnMoneySection} id={id}>
       <div className={mainFixedBox}>
         <div className={topTextBox}>
-          <h2>Earn Money</h2>
-          <p>For Driving.</p>
+          <h2 style={{ color: `${mainColor}` }}>{headerText}</h2>
+          <p>{subHeaderText}</p>
         </div>
-
-        {/*  */}
         <div className={infoTextMainBox}>
           <div className={infoTextBox}>
             <div
@@ -69,39 +80,30 @@ const EarnMoney = () => {
                 percentages >= 0 && percentages < 66 ? infoTextActive : ""
               }`}
             >
-              <h3>Make money</h3>
-              <p>
-                State of the art way to make extra money. Simply by driving you
-                can make up to <span>400$</span> per campaign for doing what you
-                already do
-              </p>
+              <h3>{slide1MainText}</h3>
+              <p>{slide1MainSubText}</p>
             </div>
             <div
               className={`${InfoText} ${
-                percentages > 66 && percentages < 99 ? infoTextActive : ""
+                percentages >= 66 && percentages < 99 ? infoTextActive : ""
               }`}
             >
-              <h3>Set your own scheldule</h3>
-              <p>
-                Ut quam in massa sagittis sapien, sit. Vitae risus, sollicitudin
-                duis eget netus blandit mauris quis. Sed et a suspendisse
-                tincidunt nibh.
-              </p>
+              <h3>{slide2MainText}</h3>
+              <p>{slide2MainSubText}</p>
             </div>
             <div
               className={`${InfoText} ${
                 percentages >= 99 ? infoTextActive : ""
               }`}
             >
-              <h3>Let the app lead the way</h3>
-              <p>
-                Ut quam in massa sagittis sapien, sit. Vitae risus, sollicitudin
-                duis eget netus blandit mauris quis. Sed et a suspendisse
-                tincidunt nibh.
-              </p>
+              <h3>{slide3MainText}</h3>
+              <p>{slide3MainSubText}</p>
             </div>
             <div className={getEarlyAccess}>
-              <button className={`${percentages >= 99 ? "" : unActive}`}>
+              <button
+                style={{ backgroundColor: `${mainColor}`, color: subColor }}
+                className={`${percentages >= 99 ? "" : unActive}`}
+              >
                 Get Early Access
               </button>
               <span className={`${percentages >= 99 ? unActive : ""}`}>
@@ -113,10 +115,10 @@ const EarnMoney = () => {
             <img
               src={`${
                 percentages >= 0 && percentages < 66
-                  ? earnMoney1
+                  ? slide1Img
                   : percentages >= 66 && percentages < 99
-                  ? earnMoney2
-                  : earnMoney3
+                  ? slide2Img
+                  : slide3Img
               }`}
               alt="img"
             />
@@ -127,9 +129,16 @@ const EarnMoney = () => {
             <div className={scrollBar}></div>
             <div
               className={scrollProgressBar}
-              style={{ height: `${scrollProgress}` }}
+              style={{
+                height: `${scrollProgress}`,
+                backgroundColor: `${mainColor}`,
+              }}
             >
-              <span></span>
+              <span
+                style={{
+                  backgroundColor: `${subColor ? subColor : mainColor}`,
+                }}
+              ></span>
             </div>
           </div>
         </div>

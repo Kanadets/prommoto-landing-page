@@ -1,9 +1,77 @@
 @import "../../lib/colors";
 
 .promoteSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
   .headerText {
+    text-align: center;
+
+    h2 {
+      margin-bottom: 9px;
+      margin-top: 0;
+      font-weight: bold;
+      font-size: 60px;
+      line-height: 120%;
+      color: $sandy-brown-color;
+    }
+
+    p {
+      margin: 0;
+      font-weight: bold;
+      font-size: 28px;
+      line-height: 34px;
+    }
   }
 
   .textDivImg {
+    max-width: 1750px;
+    width: 100%;
+    margin-top: 127px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .imageDiv {
+      max-height: 540px;
+      max-width: 903px;
+
+      img {
+        // height: 100%;
+        width: 100%;
+      }
+    }
+
+    .textDiv {
+      max-width: 653px;
+      span {
+        font-weight: bold;
+        font-size: 28px;
+        line-height: 120%;
+        color: $sandy-brown-color;
+      }
+
+      h3 {
+        margin: 0;
+        font-weight: bold;
+        font-size: 60px;
+        line-height: 120%;
+      }
+
+      p {
+        font-weight: normal;
+        font-size: 28px;
+        line-height: 140%;
+        color: $gray-color;
+      }
+    }
+  }
+
+  @media (max-width: 1764px) {
+    .textDivImg {
+      width: 95%;
+    }
   }
 }
