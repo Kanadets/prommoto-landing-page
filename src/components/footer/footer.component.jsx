@@ -20,7 +20,7 @@ const Footer = () => {
   return (
     <footer className={footerSection}>
       <div className={stayInLoop}>
-        <input />
+        <input type="email" placeholder="Enter Email Address" />
         <button>Stay in the Loop</button>
       </div>
       <div className={mainFooterDiv}>
