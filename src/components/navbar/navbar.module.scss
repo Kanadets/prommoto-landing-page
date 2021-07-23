@@ -10,7 +10,8 @@ nav {
   margin: 0 auto;
 
   .navbarLinksBtnContainer {
-    width: 80%;
+    max-width: 75%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -22,6 +23,7 @@ nav {
       width: 60%;
 
       a {
+        cursor: pointer;
         position: relative;
         text-decoration: none;
         color: $gray-color;
@@ -94,6 +96,127 @@ nav {
         color: #fff;
         padding: 20px 22px;
       }
+    }
+  }
+}
+
+@media (max-width: 1601px) {
+  nav {
+    max-width: 90%;
+
+    .navbarLinksBtnContainer {
+      .navbarSocialLinksBtnContainer {
+        width: 35%;
+      }
+    }
+  }
+}
+
+@media (max-width: 1025px) {
+  nav {
+    position: relative;
+
+    .navBurgerMenu {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      list-style: none;
+      margin: 0;
+      height: 24.54px;
+      width: 30.67px;
+      position: relative;
+
+      .burgerMenu {
+        background-color: $blue-ribbon-color;
+        height: 4px;
+        width: 100%;
+        opacity: 60%;
+        // border-radius: 999px;
+      }
+
+      .upperBurger {
+        transition: all 0.2s ease-in-out;
+        transform-origin: center;
+        transform: rotate(0deg);
+        position: absolute;
+        top: 0;
+      }
+
+      .upperBurgerOpen {
+        top: 50%;
+        transform: translateY(-50%) rotate(-45deg);
+        margin: auto;
+      }
+
+      .middleBurger {
+        transition: all 0.2s ease-in-out;
+        transform: translateX(0);
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+      }
+
+      .middleBurgerOpen {
+        opacity: 0;
+        transform: translateX(50px);
+      }
+
+      .bottomBurger {
+        transition: all 0.2s ease-in-out;
+        transform-origin: center;
+        transform: rotate(0deg);
+        position: absolute;
+        bottom: 0;
+      }
+
+      .bottomBurgerOpen {
+        transform-origin: center;
+        margin: auto;
+        bottom: 50%;
+        transform: translateY(50%) rotate(45deg);
+      }
+    }
+
+    .navbarLinksOpened {
+      position: absolute;
+      bottom: -180%;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      max-width: 100%;
+      transform-origin: top;
+      transform: scaleY(1);
+      transition: all 0.2s ease-in-out;
+
+      .navbarLinks {
+        a {
+          font-weight: bold;
+          font-size: 19px;
+          line-height: 18px;
+        }
+      }
+
+      .navbarSocialLinksBtnContainer {
+        width: 40%;
+
+        .navbarSocialLinks {
+          width: 40%;
+        }
+
+        button {
+          font-weight: bold;
+          font-size: 15.0222px;
+          line-height: 19px;
+          letter-spacing: -0.355661px;
+          padding: 10px 20px;
+        }
+      }
+    }
+
+    .navbarLinksClosed {
+      transform: scaleY(0);
     }
   }
 }

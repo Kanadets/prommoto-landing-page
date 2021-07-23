@@ -33,7 +33,7 @@ const GetInTouch = () => {
   };
 
   return (
-    <section className={getInTouchSection}>
+    <section className={getInTouchSection} id="investors">
       <img src={backImg} alt="back" />
       <div className={getInTouchDiv}>
         <div className={headerTextTouch}>

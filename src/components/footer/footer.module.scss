@@ -1,7 +1,7 @@
 @import "../../lib/colors";
 
 .footerSection {
-  max-height: 640px;
+  // max-height: 640px;
   height: 100%;
   padding: 250px 0;
   position: relative;
@@ -46,7 +46,7 @@
   }
 
   .mainFooterDiv {
-    max-height: 213px;
+    height: 190px;
     max-width: 85%;
     margin: auto;
     display: flex;
@@ -72,14 +72,17 @@
       justify-content: space-between;
       align-items: center;
       width: 40%;
+      height: 80%;
+      align-self: baseline;
 
       .contactDiv {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        height: 100%;
         h4 {
           margin: 0;
-          margin-bottom: 67px;
+
           font-weight: bold;
           font-size: 26.6722px;
           line-height: 37px;
@@ -97,12 +100,15 @@
       }
 
       .followDiv {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
         h5 {
           font-weight: bold;
           font-size: 26.6722px;
           line-height: 37px;
           margin: 0;
-          margin-bottom: 67px;
         }
 
         .linksImgDiv {
@@ -113,6 +119,7 @@
           img {
             transition: all 0.2s ease-in-out;
             cursor: pointer;
+            margin-bottom: 25px;
             &:hover {
               transform: scale(1.1);
             }

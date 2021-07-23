@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import { Link } from "react-scroll";
 
 import prommotoLogo from "assets/prommotoLogo.svg";
 import fbLink from "assets/fbLink.svg";
@@ -11,19 +12,61 @@ import {
   navbarSocialLinksBtnContainer,
   navbarSocialLinks,
   buttonClass,
+  navBurgerMenu,
+  burgerMenu,
+  upperBurger,
+  upperBurgerOpen,
+  middleBurger,
+  middleBurgerOpen,
+  bottomBurger,
+  bottomBurgerOpen,
+  navbarLinksOpened,
+  navbarLinksClosed,
 } from "./navbar.module.scss";
 
 const Navbar = () => {
+  const [isNavOpen, setIsNavOpen] = useState(false);
   return (
     <nav>
       <img src={prommotoLogo} alt="prommoto logo" />
-      <div className={navbarLinksBtnContainer}>
+      <div className={navBurgerMenu} onClick={() => setIsNavOpen(!isNavOpen)}>
+        <div
+          className={`${burgerMenu} ${upperBurger} ${
+            isNavOpen ? upperBurgerOpen : ""
+          }`}
+        ></div>
+        <div
+          className={`${burgerMenu} ${middleBurger} ${
+            isNavOpen ? middleBurgerOpen : ""
+          }`}
+        ></div>
+        <div
+          className={`${burgerMenu} ${bottomBurger} ${
+            isNavOpen ? bottomBurgerOpen : ""
+          }`}
+        ></div>
+      </div>
+      <div
+        className={`${navbarLinksBtnContainer} ${navbarLinksOpened} ${
+          isNavOpen ? "" : navbarLinksClosed
+        }`}
+      >
         <div className={navbarLinks}>
-          <a href="#0">Home</a>
-          <a href="#0">Drivers</a>
-          <a href="#0">Brands</a>
-          <a href="#0">Installers</a>
-          <a href="#0">Investors</a>
+          <Link to="header" smooth={true}>
+            Home
+          </Link>
+          <Link to="forDrivers" smooth={true}>
+            Drivers
+          </Link>
+          <Link to="brands" smooth={true}>
+            Brands
+          </Link>
+          <Link to="forInstallers" smooth={true}>
+            Installers
+          </Link>
+          <Link to="investors" smooth={true} offset={250}>
+            Investors
+          </Link>
         </div>
         <div className={navbarSocialLinksBtnContainer}>
           <div className={navbarSocialLinks}>

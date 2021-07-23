@@ -50,3 +50,14 @@
     width: 100%;
   }
 }
+
+@media (max-width: 1601px) {
+  .joinWaitListSection {
+    .joinWaitListTextDiv {
+      button {
+        padding: 20px 32px;
+        font-size: 20px;
+      }
+    }
+  }
+}

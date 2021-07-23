@@ -51,7 +51,9 @@ function App() {
         tincidunt nibh."
         slide3Img={earnMoney3}
         mainColor="#F6555A"
-        id="scrollEarnSection"
+        scrollBg={"rgba(246, 85, 90, 0.1)"}
+        borderColor="#F6555A"
+        id="forDrivers"
         // subColor="#fff"
       />
       <Promote />
@@ -70,7 +72,9 @@ function App() {
         slide3Img={earnGrow3}
         mainColor="#FFE100"
         subColor="#0043EA"
-        id="scrollGrowSection"
+        scrollBg={"rgba(0, 67, 234, 0.1)"}
+        borderColor="rgba(0, 67, 234, 0.54)"
+        id="forInstallers"
       />
       <GetInTouch />
       <Footer />

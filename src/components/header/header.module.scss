@@ -61,3 +61,25 @@ header {
     }
   }
 }
+
+@media (max-width: 1601px) {
+  header {
+    .headerTextContainer {
+      width: 70%;
+    }
+  }
+}
+
+@media (max-width: 1025px) {
+  header {
+    .headerTextContainer {
+      width: 90%;
+    }
+
+    .headerImgContainer {
+      .carImgClass {
+        width: 75%;
+      }
+    }
+  }
+}

@@ -34,6 +34,8 @@ const EarnMoney = ({
   slide3Img,
   mainColor,
   subColor,
+  scrollBg,
+  borderColor,
   id,
 }) => {
   const [topPos, setTopPos] = useState(0);
@@ -51,7 +53,7 @@ const EarnMoney = ({
     const scrollTopPos = document.getElementById(id);
     setTopPos(scrollTopPos.getBoundingClientRect().top - 505);
     setElemHeight(scrollTopPos.scrollHeight);
-  }, []);
+  }, [id]);
 
   //console.log(topPos, elemHeight);
 
@@ -79,6 +81,7 @@ const EarnMoney = ({
               className={`${InfoText} ${
                 percentages >= 0 && percentages < 66 ? infoTextActive : ""
               }`}
+              scrollBg
             >
               <h3>{slide1MainText}</h3>
               <p>{slide1MainSubText}</p>
@@ -124,9 +127,24 @@ const EarnMoney = ({
             />
           </div>
           <div className={scrollController}>
-            <div className={scrollBar}></div>
-            <div className={scrollBar}></div>
-            <div className={scrollBar}></div>
+            <div
+              className={scrollBar}
+              style={{
+                background: `${scrollBg}`,
+                borderBottom: `2px solid ${borderColor}`,
+              }}
+            ></div>
+            <div
+              className={scrollBar}
+              style={{ background: `${scrollBg}` }}
+            ></div>
+            <div
+              className={scrollBar}
+              style={{
+                background: `${scrollBg}`,
+                borderTop: `2px solid ${borderColor}`,
+              }}
+            ></div>
             <div
               className={scrollProgressBar}
               style={{

@@ -13,7 +13,7 @@ import rightImage from "assets/promoteRightImg.png";
 
 const Promote = () => {
   return (
-    <section className={promoteSection}>
+    <section className={promoteSection} id="brands">
       <div className={headerText}>
         <h2>Promote</h2>
         <p>Your brand</p>

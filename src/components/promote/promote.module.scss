@@ -39,7 +39,6 @@
       max-width: 903px;
 
       img {
-        // height: 100%;
         width: 100%;
       }
     }
@@ -68,10 +67,34 @@
       }
     }
   }
+}
 
-  @media (max-width: 1764px) {
+@media (max-width: 1764px) {
+  .promoteSection {
     .textDivImg {
-      width: 95%;
+      width: 90%;
+
+      .textDiv {
+        span {
+          font-size: 24px;
+        }
+
+        h3 {
+          font-size: 54px;
+        }
+
+        p {
+          font-size: 24px;
+        }
+      }
+
+      .imageDiv {
+        width: 75%;
+      }
+
+      .textDiv {
+        width: 80%;
+      }
     }
   }
 }

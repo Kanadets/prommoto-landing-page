@@ -11,7 +11,6 @@
   .mainFixedBox {
     position: sticky;
     top: 40px;
-
     margin: auto;
     max-width: 1468.16px;
     max-height: 811.25px;
@@ -153,17 +152,15 @@
         .scrollBar {
           height: 33%;
           width: 13px;
-          background-color: rgba(246, 85, 90, 0.1);
+          // background-color: ;
           margin: 0 auto;
 
           &:first-child {
             border-top-left-radius: 5px;
             border-top-right-radius: 5px;
-            border-bottom: 2px solid $carnation-color;
           }
 
           &:nth-child(3) {
-            border-top: 2px solid $carnation-color;
             border-bottom-left-radius: 5px;
             border-bottom-right-radius: 5px;
           }
@@ -174,7 +171,7 @@
           position: absolute;
           top: 0;
           width: 13px;
-          background-color: $carnation-color;
+          // background-color: $carnation-color;
           min-height: 0%;
           max-height: 100%;
           left: 0;
@@ -197,3 +194,116 @@
     }
   }
 }
+
+@media (max-width: 1601px) {
+  .earnMoneySection {
+    .mainFixedBox {
+      .infoTextMainBox {
+        .infoTextBox {
+          .InfoText {
+            width: 90%;
+            h3 {
+              font-size: 50.3529px;
+            }
+          }
+
+          .infoTextActive {
+            h3 {
+              color: #000;
+            }
+
+            p {
+              font-size: 24px;
+            }
+          }
+
+          .getEarlyAccess {
+            button {
+              padding: 20px 32px;
+              font-size: 20px;
+            }
+          }
+        }
+
+        .infoImgBox {
+          width: 50%;
+
+          img {
+            height: 75%;
+            margin: auto;
+          }
+        }
+
+        .scrollController {
+          right: -4%;
+        }
+      }
+    }
+  }
+}
+
+// @media (max-width: 1025px) {
+//   .earnMoneySection {
+//     padding-top: 38px;
+//     padding-bottom: 117px;
+//     height: 100%;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+
+//     .mainFixedBox {
+//       display: flex;
+//       flex-direction: column;
+//       align-items: center;
+
+//       .topTextBox {
+//         margin-bottom: 100px;
+//       }
+
+//       .infoTextMainBox {
+//         display: flex;
+//         flex-direction: column;
+//         align-items: center;
+//         .infoTextBox {
+//           .InfoText {
+//             h3 {
+//             }
+
+//             p {
+//             }
+//           }
+
+//           .infoTextActive {
+//             h3 {
+//             }
+
+//             p {
+//               span {
+//               }
+//             }
+//           }
+
+//           .getEarlyAccess {
+//             span {
+//             }
+
+//             button {
+//             }
+
+//             .unActive {
+//             }
+//           }
+//         }
+
+//         .infoImgBox {
+//           img {
+//           }
+//         }
+
+//         .scrollController {
+//           display: none;
+//         }
+//       }
+//     }
+//   }
+// }

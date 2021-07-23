@@ -1,6 +1,6 @@
 import React from "react";
 
-import carImg from "assets/carMockup.svg";
+import carImg from "assets/carMockup.png";
 import roadImg from "assets/bottomCar.png";
 
 import {
@@ -12,7 +12,7 @@ import {
 
 const Header = () => {
   return (
-    <header>
+    <header id="header">
       <div className={headerTextContainer}>
         <h1>
           <span>Get paid</span> for doing what you already do.
