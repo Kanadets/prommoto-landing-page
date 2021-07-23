@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useMediaQuery } from "react-responsive";
 
 import {
   earnMoneySection,
@@ -14,11 +15,9 @@ import {
   scrollController,
   scrollBar,
   scrollProgressBar,
+  headerTextTabMob,
+  sections,
 } from "./earnMoney.module.scss";
-
-import earnMoney1 from "assets/earnMoney1.svg";
-import earnMoney2 from "assets/earnMoney2.svg";
-import earnMoney3 from "assets/earnMoney3.png";
 
 const EarnMoney = ({
   headerText,
@@ -49,18 +48,20 @@ const EarnMoney = ({
   //   appLead: false,
   // });
 
+  const isTablet = useMediaQuery({
+    query: "(max-width: 1025px)",
+  });
+
   useEffect(() => {
     const scrollTopPos = document.getElementById(id);
     setTopPos(scrollTopPos.getBoundingClientRect().top - 505);
     setElemHeight(scrollTopPos.scrollHeight);
   }, [id]);
 
-  //console.log(topPos, elemHeight);
-
   window.addEventListener("scroll", () => {
     const progress = Math.round(((window.scrollY - topPos) / elemHeight) * 100);
 
-    if (window.scrollY > 2751) {
+    if (window.scrollY > 2958) {
       setScrollProgress(`${progress}%`);
       setPercentages(progress);
     } else {
@@ -70,97 +71,142 @@ const EarnMoney = ({
 
   return (
     <section className={earnMoneySection} id={id}>
-      <div className={mainFixedBox}>
-        <div className={topTextBox}>
-          <h2 style={{ color: `${mainColor}` }}>{headerText}</h2>
-          <p>{subHeaderText}</p>
-        </div>
-        <div className={infoTextMainBox}>
-          <div className={infoTextBox}>
-            <div
-              className={`${InfoText} ${
-                percentages >= 0 && percentages < 66 ? infoTextActive : ""
-              }`}
-              scrollBg
-            >
-              <h3>{slide1MainText}</h3>
-              <p>{slide1MainSubText}</p>
-            </div>
-            <div
-              className={`${InfoText} ${
-                percentages >= 66 && percentages < 99 ? infoTextActive : ""
-              }`}
-            >
-              <h3>{slide2MainText}</h3>
-              <p>{slide2MainSubText}</p>
-            </div>
-            <div
-              className={`${InfoText} ${
-                percentages >= 99 ? infoTextActive : ""
-              }`}
-            >
-              <h3>{slide3MainText}</h3>
-              <p>{slide3MainSubText}</p>
-            </div>
-            <div className={getEarlyAccess}>
-              <button
-                style={{ backgroundColor: `${mainColor}`, color: subColor }}
-                className={`${percentages >= 99 ? "" : unActive}`}
-              >
-                Get Early Access
-              </button>
-              <span className={`${percentages >= 99 ? unActive : ""}`}>
-                Join early users list
-              </span>
-            </div>
+      {isTablet ? (
+        <>
+          <div className={headerTextTabMob}>
+            <h2>{headerText}</h2>
+            <p>{subHeaderText}</p>
           </div>
-          <div className={infoImgBox}>
+          <div className={sections}>
+            <h3>{slide1MainText}</h3>
+            <p>{slide1MainSubText}</p>
             <img
-              src={`${
-                percentages >= 0 && percentages < 66
-                  ? slide1Img
-                  : percentages >= 66 && percentages < 99
-                  ? slide2Img
-                  : slide3Img
-              }`}
-              alt="img"
+              src={slide1Img}
+              alt=""
+              style={{
+                marginBottom: "100px",
+              }}
             />
           </div>
-          <div className={scrollController}>
-            <div
-              className={scrollBar}
+          <div className={sections}>
+            <h3>{slide2MainText}</h3>
+            <p>{slide2MainSubText}</p>
+            <img
+              src={slide2Img}
+              alt=""
               style={{
-                background: `${scrollBg}`,
-                borderBottom: `2px solid ${borderColor}`,
+                marginBottom: "100px",
               }}
-            ></div>
-            <div
-              className={scrollBar}
-              style={{ background: `${scrollBg}` }}
-            ></div>
-            <div
-              className={scrollBar}
+            />
+          </div>
+          <div className={sections}>
+            <h3>{slide3MainText}</h3>
+            <p>{slide3MainSubText}</p>
+            <img
+              src={slide3Img}
+              alt=""
               style={{
-                background: `${scrollBg}`,
-                borderTop: `2px solid ${borderColor}`,
+                maxWidth: `${
+                  slide3Img ===
+                  "/prommoto-landing-page/static/media/earnMoney3.ea8a71c7.png"
+                    ? "495px"
+                    : ""
+                }`,
               }}
-            ></div>
-            <div
-              className={scrollProgressBar}
-              style={{
-                height: `${scrollProgress}`,
-                backgroundColor: `${mainColor}`,
-              }}
-            >
-              <span
+            />
+            <button>Get early access</button>
+          </div>
+        </>
+      ) : (
+        <div className={mainFixedBox}>
+          <div className={topTextBox}>
+            <h2 style={{ color: `${mainColor}` }}>{headerText}</h2>
+            <p>{subHeaderText}</p>
+          </div>
+          <div className={infoTextMainBox}>
+            <div className={infoTextBox}>
+              <div
+                className={`${InfoText} ${
+                  percentages >= 0 && percentages < 66 ? infoTextActive : ""
+                }`}
+                scrollBg
+              >
+                <h3>{slide1MainText}</h3>
+                <p>{slide1MainSubText}</p>
+              </div>
+              <div
+                className={`${InfoText} ${
+                  percentages >= 66 && percentages < 99 ? infoTextActive : ""
+                }`}
+              >
+                <h3>{slide2MainText}</h3>
+                <p>{slide2MainSubText}</p>
+              </div>
+              <div
+                className={`${InfoText} ${
+                  percentages >= 99 ? infoTextActive : ""
+                }`}
+              >
+                <h3>{slide3MainText}</h3>
+                <p>{slide3MainSubText}</p>
+              </div>
+              <div className={getEarlyAccess}>
+                <button
+                  style={{ backgroundColor: `${mainColor}`, color: subColor }}
+                  className={`${percentages >= 99 ? "" : unActive}`}
+                >
+                  Get Early Access
+                </button>
+                <span className={`${percentages >= 99 ? unActive : ""}`}>
+                  Join early users list
+                </span>
+              </div>
+            </div>
+            <div className={infoImgBox}>
+              <img
+                src={`${percentages >= 0 ? slide1Img : slide2Img}
+                   ${percentages >= 66 && slide2Img}
+                   ${percentages >= 99 && slide3Img}
+                `}
+                alt="img"
+              />
+            </div>
+            <div className={scrollController}>
+              <div
+                className={scrollBar}
                 style={{
-                  backgroundColor: `${subColor ? subColor : mainColor}`,
+                  background: `${scrollBg}`,
+                  borderBottom: `2px solid ${borderColor}`,
                 }}
-              ></span>
+              ></div>
+              <div
+                className={scrollBar}
+                style={{ background: `${scrollBg}` }}
+              ></div>
+              <div
+                className={scrollBar}
+                style={{
+                  background: `${scrollBg}`,
+                  borderTop: `2px solid ${borderColor}`,
+                }}
+              ></div>
+              <div
+                className={scrollProgressBar}
+                style={{
+                  height: `${scrollProgress}`,
+                  backgroundColor: `${mainColor}`,
+                }}
+              >
+                <span
+                  style={{
+                    backgroundColor: `${subColor ? subColor : mainColor}`,
+                  }}
+                ></span>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      )}
     </section>
   );
 };

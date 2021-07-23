@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useMediaQuery } from "react-responsive";
 
 import {
   getInTouchSection,
@@ -21,6 +22,10 @@ const GetInTouch = () => {
     phoneNum: "",
   });
 
+  const isTablet = useMediaQuery({
+    query: "(max-width: 1025px)",
+  });
+
   const handleSubmit = (event) => {
     event.preventDefault();
     setFormStage(formStage + 1);
@@ -37,8 +42,9 @@ const GetInTouch = () => {
       <img src={backImg} alt="back" />
       <div className={getInTouchDiv}>
         <div className={headerTextTouch}>
-          <span>For Investors</span>
+          {!isTablet && <span>For Investors</span>}
           <h2>Be Part of Prommoto</h2>
+          {isTablet && <span>For Investors</span>}
           <p>
             Ut quam in massa sagittis sapien, sit. Vitae risus, sollicitudin
             duis eget netus blandit mauris quis. Sed et a suspendisse tincidunt

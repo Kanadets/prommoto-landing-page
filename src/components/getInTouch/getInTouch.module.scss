@@ -130,3 +130,59 @@
     }
   }
 }
+
+@media (max-width: 1025px) {
+  .getInTouchSection {
+    position: relative;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    img {
+      width: 100%;
+    }
+    .getInTouchDiv {
+      width: 70%;
+      padding: 0 25px;
+
+      .headerTextTouch {
+        text-align: center;
+        max-width: none;
+        width: 100%;
+        span {
+          font-weight: bold;
+          font-size: 24px;
+          line-height: 120%;
+          color: #000;
+          margin-bottom: 17px;
+        }
+
+        h2 {
+          margin: 8px 0;
+          font-size: 54px;
+          color: $blue-ribbon-color;
+        }
+
+        p {
+          font-size: 24px;
+        }
+      }
+
+      .formTouchDiv {
+        width: 100%;
+        .formDiv {
+          max-width: 840px;
+          display: flex;
+          flex-direction: column;
+          margin: 0 auto;
+
+          button {
+            max-width: none;
+            width: 100%;
+            padding: 20px;
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+}

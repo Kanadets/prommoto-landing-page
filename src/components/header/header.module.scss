@@ -70,10 +70,18 @@ header {
   }
 }
 
-@media (max-width: 1025px) {
+@media (max-width: 1200px) {
   header {
     .headerTextContainer {
       width: 90%;
+
+      h1 {
+        font-size: 54px;
+      }
+
+      p {
+        font-size: 24px;
+      }
     }
 
     .headerImgContainer {
