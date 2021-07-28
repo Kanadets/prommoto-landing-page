@@ -1,8 +1,9 @@
 @import "../../lib/colors";
 
 .earnMoneySection {
+  scroll-behaviour: smooth;
   margin-top: 200px;
-  height: 450vh;
+  height: 420vh;
   background-color: rgba(233, 235, 241, 0.32);
   display: block;
   padding: 0 50px;
@@ -10,7 +11,7 @@
 
   .mainFixedBox {
     position: sticky;
-    top: 40px;
+    top: 20px;
     margin: auto;
     max-width: 1468.16px;
     max-height: 811.25px;
@@ -45,6 +46,7 @@
       align-items: center;
       width: 100%;
       position: relative;
+      margin-top: 20px;
 
       .infoTextBox {
         .InfoText {
@@ -54,8 +56,8 @@
             cursor: default;
             transition: all 0.2s ease-in-out;
             font-weight: bold;
-            font-size: 58.3529px;
-            line-height: 70px;
+            font-size: 48px;
+            line-height: 60px;
             margin: 0;
             color: $pale-slate-color;
           }
@@ -69,12 +71,13 @@
         .infoTextActive {
           h3 {
             color: #000;
+            margin-bottom: 25px;
           }
 
           p {
             display: block;
             font-weight: normal;
-            font-size: 28px;
+            font-size: 20px;
             line-height: 150%;
             max-width: 600px;
             margin: 0;
@@ -110,7 +113,6 @@
             opacity: 100;
             transition: all 0.2s ease-in-out;
             font-weight: bold;
-            font-size: 22.5865px;
             line-height: 27px;
             color: #fff;
             cursor: pointer;
@@ -118,7 +120,8 @@
             background-color: $carnation-color;
             border: none;
             border-radius: 33.8798px;
-            padding: 23px 37px;
+            padding: 15px 40px;
+            font-size: 20px;
           }
 
           .unActive {
@@ -199,6 +202,7 @@
 @media (max-width: 1601px) {
   .earnMoneySection {
     .mainFixedBox {
+      justify-content: unset;
       .infoTextMainBox {
         .infoTextBox {
           .InfoText {
@@ -236,7 +240,7 @@
         }
 
         .scrollController {
-          right: -4%;
+          right: -2%;
         }
       }
     }
@@ -300,6 +304,54 @@
         display: block;
         margin: 0 auto;
         width: 100%;
+      }
+
+      button {
+        background-color: $blue-ribbon-color;
+        border: none;
+        border-radius: 38px;
+        width: 100%;
+        margin-top: 122px;
+        padding: 20px 32px;
+        font-size: 20px;
+        font-weight: bold;
+        color: #fff;
+      }
+    }
+  }
+}
+
+@media (max-width: 760px) {
+  .earnMoneySection {
+    .headerTextTabMob {
+      margin-bottom: 50px;
+
+      h2 {
+        font-weight: bold;
+        font-size: 32px;
+        line-height: 120%;
+      }
+
+      p {
+        font-weight: 600;
+        font-size: 17px;
+        line-height: 20px;
+      }
+    }
+
+    .sections {
+      padding-top: 38px;
+      padding-bottom: 110px;
+      h3 {
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 120%;
+      }
+
+      p {
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 150%;
       }
 
       button {

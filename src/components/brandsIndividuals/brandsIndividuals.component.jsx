@@ -1,4 +1,5 @@
 import React from "react";
+import { useMediaQuery } from "react-responsive";
 
 import {
   brandsIndividualsSection,
@@ -6,8 +7,13 @@ import {
 } from "./brandsIndividuals.module.scss";
 
 import graphPic from "assets/pathBack.png";
+import graphPicMob from "assets/graphPicMob.svg";
 
 const BrandsIndividuals = () => {
+  const isMob = useMediaQuery({
+    query: "(max-width: 760px)",
+  });
+
   return (
     <section className={brandsIndividualsSection}>
       <div className={brandsIndividualsContainer}>
@@ -18,7 +24,7 @@ const BrandsIndividuals = () => {
           way to make extra money, by simply doing what they’re already doing.
         </p>
       </div>
-      <img src={graphPic} alt="graph" />
+      <img src={`${isMob ? graphPicMob : graphPic}`} alt="graph" />
     </section>
   );
 };

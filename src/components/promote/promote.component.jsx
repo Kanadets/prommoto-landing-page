@@ -17,6 +17,10 @@ const Promote = () => {
     query: "(max-width: 1025px)",
   });
 
+  const isMob = useMediaQuery({
+    query: "(max-width: 760px)",
+  });
+
   return (
     <section className={promoteSection} id="brands">
       <div className={headerText}>
@@ -69,7 +73,11 @@ const Promote = () => {
           </p>
         </div>
         <div className={imageDiv}>
-          <img src={rightImage} alt="rightImg" />
+          <img
+            src={rightImage}
+            alt="rightImg"
+            style={{ margin: `${isMob ? "0 auto" : "0 0 0 auto"}` }}
+          />
         </div>
       </div>
     </section>

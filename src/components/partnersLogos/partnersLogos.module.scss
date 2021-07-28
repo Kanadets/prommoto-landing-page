@@ -30,3 +30,13 @@
     }
   }
 }
+
+@media (max-width: 760px) {
+  .partnersLogosSection {
+    .logosContainer {
+      img {
+        width: 90%;
+      }
+    }
+  }
+}

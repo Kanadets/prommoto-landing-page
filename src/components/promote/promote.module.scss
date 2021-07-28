@@ -32,14 +32,16 @@
     margin-top: 127px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
 
     .imageDiv {
       max-height: 540px;
       max-width: 903px;
 
       img {
-        width: 100%;
+        width: 80%;
+
+        display: block;
       }
     }
 
@@ -47,7 +49,7 @@
       max-width: 653px;
       span {
         font-weight: bold;
-        font-size: 28px;
+        font-size: 24px;
         line-height: 120%;
         color: $sandy-brown-color;
       }
@@ -55,14 +57,14 @@
       h3 {
         margin: 0;
         font-weight: bold;
-        font-size: 60px;
-        line-height: 120%;
+        font-size: 35px;
+        line-height: 50px;
       }
 
       p {
         font-weight: normal;
-        font-size: 28px;
-        line-height: 140%;
+        font-size: 20px;
+        line-height: 25px;
         color: $gray-color;
       }
     }
@@ -126,6 +128,54 @@
       .imageDiv {
         width: 90%;
         margin-top: 45px;
+      }
+    }
+  }
+}
+
+@media (max-width: 760px) {
+  .promoteSection {
+    .headerText {
+      h2 {
+        font-weight: bold;
+        font-size: 32px;
+        line-height: 120%;
+      }
+
+      p {
+        font-weight: 600;
+        font-size: 17px;
+        line-height: 20px;
+      }
+    }
+
+    .textDivImg {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .textDiv {
+        h3 {
+          font-size: 24px;
+          line-height: 120%;
+          text-align: center;
+        }
+
+        p {
+          font-weight: normal;
+          font-size: 16px;
+          line-height: 150%;
+          text-align: center;
+        }
+      }
+
+      .imageDiv {
+        width: 100%;
+        margin-top: 45px;
+        img {
+          margin: 0 auto;
+        }
       }
     }
   }

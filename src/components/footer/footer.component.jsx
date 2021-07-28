@@ -1,4 +1,5 @@
 import React from "react";
+import { useMediaQuery } from "react-responsive";
 
 import {
   footerSection,
@@ -9,6 +10,7 @@ import {
   contactDiv,
   followDiv,
   linksImgDiv,
+  stayInLoopMob,
 } from "./footer.module.scss";
 
 import prommotoLogo from "assets/prommotoLogo.svg";
@@ -17,12 +19,30 @@ import inst from "assets/inst.svg";
 import twitter from "assets/twitter.svg";
 
 const Footer = () => {
+  const isTablet = useMediaQuery({
+    query: "(max-width: 1025px)",
+  });
+
   return (
     <footer className={footerSection}>
-      <div className={stayInLoop}>
-        <input type="email" placeholder="Enter Email Address" />
-        <button>Stay in the Loop</button>
-      </div>
+      {isTablet ? (
+        <>
+          <div className={stayInLoopMob}>
+            <div>
+              <input type="email" required placeholder="Enter your email..." />
+              <button>Stay in the Loop</button>
+            </div>
+          </div>
+        </>
+      ) : (
+        <>
+          <div className={stayInLoop}>
+            <input type="email" placeholder="Enter Email Address" />
+            <button>Stay in the Loop</button>
+          </div>
+        </>
+      )}
+
       <div className={mainFooterDiv}>
         <div className={logoDiv}>
           <img src={prommotoLogo} alt="logo" />

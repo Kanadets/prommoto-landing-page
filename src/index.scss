@@ -1,17 +1,23 @@
 @import "./lib/fonts", "./lib/colors";
 
-body {
-  margin: 0;
-  font-family: AvenirNextLTPro, sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  //width: 100%;
-  background-color: #fdfaf8;
-  margin-top: 56px;
-  height: 100%;
+html {
+  scroll-behaviour: smooth;
+  overflow-x: hidden;
 
-  #root {
-    width: 100%;
+  body {
+    margin: 0;
+    // overflow-x: hidden;
+    font-family: AvenirNextLTPro, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    //width: 100%;
+    background-color: #fdfaf8;
+    margin-top: 56px;
+    height: 100%;
+
+    #root {
+      width: 100%;
+    }
   }
 }

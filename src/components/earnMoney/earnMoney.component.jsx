@@ -39,14 +39,26 @@ const EarnMoney = ({
 }) => {
   const [topPos, setTopPos] = useState(0);
   const [elemHeight, setElemHeight] = useState(0);
-
   const [percentages, setPercentages] = useState(0);
   const [scrollProgress, setScrollProgress] = useState("33%");
+  // const [activeImg, setActiveImg] = useState(slide1Img);
   // const [activeSection, setActiveSection] = useState({
   //   makeMoney: true,
   //   ownSchedule: false,
   //   appLead: false,
   // });
+
+  // if (scrollProgress <= "33") {
+  //   setActiveImg(slide1Img);
+  // }
+
+  // if (scrollProgress >= "33") {
+  //   setActiveImg(slide2Img);
+  // }
+
+  // if (scrollProgress <= "99") {
+  //   setActiveImg(slide3Img);
+  // }
 
   const isTablet = useMediaQuery({
     query: "(max-width: 1025px)",
@@ -61,7 +73,7 @@ const EarnMoney = ({
   window.addEventListener("scroll", () => {
     const progress = Math.round(((window.scrollY - topPos) / elemHeight) * 100);
 
-    if (window.scrollY > 2958) {
+    if (window.scrollY > 2751) {
       setScrollProgress(`${progress}%`);
       setPercentages(progress);
     } else {
@@ -163,13 +175,13 @@ const EarnMoney = ({
               </div>
             </div>
             <div className={infoImgBox}>
-              <img
-                src={`${percentages >= 0 ? slide1Img : slide2Img}
-                   ${percentages >= 66 && slide2Img}
-                   ${percentages >= 99 && slide3Img}
-                `}
-                alt="img"
-              />
+              {percentages <= 66 ? (
+                <img src={`${slide1Img}`} alt="img" />
+              ) : percentages >= 66 && percentages < 99 ? (
+                <img src={`${slide2Img}`} alt="img" />
+              ) : (
+                <img src={`${slide3Img}`} alt="img" />
+              )}
             </div>
             <div className={scrollController}>
               <div
