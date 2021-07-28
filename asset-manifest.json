@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/prommoto-landing-page/static/css/main.769957c1.chunk.css",
-    "main.js": "/prommoto-landing-page/static/js/main.06f482c7.chunk.js",
-    "main.js.map": "/prommoto-landing-page/static/js/main.06f482c7.chunk.js.map",
+    "main.css": "/prommoto-landing-page/static/css/main.468b034f.chunk.css",
+    "main.js": "/prommoto-landing-page/static/js/main.20b7cd0f.chunk.js",
+    "main.js.map": "/prommoto-landing-page/static/js/main.20b7cd0f.chunk.js.map",
     "runtime-main.js": "/prommoto-landing-page/static/js/runtime-main.67eb02f4.js",
     "runtime-main.js.map": "/prommoto-landing-page/static/js/runtime-main.67eb02f4.js.map",
     "static/js/2.83ae7dfd.chunk.js": "/prommoto-landing-page/static/js/2.83ae7dfd.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.8c09ff2c.chunk.js": "/prommoto-landing-page/static/js/3.8c09ff2c.chunk.js",
     "static/js/3.8c09ff2c.chunk.js.map": "/prommoto-landing-page/static/js/3.8c09ff2c.chunk.js.map",
     "index.html": "/prommoto-landing-page/index.html",
-    "static/css/main.769957c1.chunk.css.map": "/prommoto-landing-page/static/css/main.769957c1.chunk.css.map",
+    "static/css/main.468b034f.chunk.css.map": "/prommoto-landing-page/static/css/main.468b034f.chunk.css.map",
     "static/js/2.83ae7dfd.chunk.js.LICENSE.txt": "/prommoto-landing-page/static/js/2.83ae7dfd.chunk.js.LICENSE.txt",
     "static/media/index.scss": "/prommoto-landing-page/static/media/AvenirNextLTPro-UltLt.70a1d4c5.otf",
     "static/media/backCute.4943b624.png": "/prommoto-landing-page/static/media/backCute.4943b624.png",
@@ -43,7 +43,7 @@
   "entrypoints": [
     "static/js/runtime-main.67eb02f4.js",
     "static/js/2.83ae7dfd.chunk.js",
-    "static/css/main.769957c1.chunk.css",
-    "static/js/main.06f482c7.chunk.js"
+    "static/css/main.468b034f.chunk.css",
+    "static/js/main.20b7cd0f.chunk.js"
   ]
 }
