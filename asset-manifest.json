@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/prommoto-landing-page/static/css/main.17993a24.chunk.css",
-    "main.js": "/prommoto-landing-page/static/js/main.d3165758.chunk.js",
-    "main.js.map": "/prommoto-landing-page/static/js/main.d3165758.chunk.js.map",
-    "runtime-main.js": "/prommoto-landing-page/static/js/runtime-main.97a1399e.js",
-    "runtime-main.js.map": "/prommoto-landing-page/static/js/runtime-main.97a1399e.js.map",
-    "static/js/2.f06b5dd5.chunk.js": "/prommoto-landing-page/static/js/2.f06b5dd5.chunk.js",
-    "static/js/2.f06b5dd5.chunk.js.map": "/prommoto-landing-page/static/js/2.f06b5dd5.chunk.js.map",
-    "static/js/3.0f2115ab.chunk.js": "/prommoto-landing-page/static/js/3.0f2115ab.chunk.js",
-    "static/js/3.0f2115ab.chunk.js.map": "/prommoto-landing-page/static/js/3.0f2115ab.chunk.js.map",
+    "main.css": "/prommoto-landing-page/static/css/main.769957c1.chunk.css",
+    "main.js": "/prommoto-landing-page/static/js/main.06f482c7.chunk.js",
+    "main.js.map": "/prommoto-landing-page/static/js/main.06f482c7.chunk.js.map",
+    "runtime-main.js": "/prommoto-landing-page/static/js/runtime-main.67eb02f4.js",
+    "runtime-main.js.map": "/prommoto-landing-page/static/js/runtime-main.67eb02f4.js.map",
+    "static/js/2.83ae7dfd.chunk.js": "/prommoto-landing-page/static/js/2.83ae7dfd.chunk.js",
+    "static/js/2.83ae7dfd.chunk.js.map": "/prommoto-landing-page/static/js/2.83ae7dfd.chunk.js.map",
+    "static/js/3.8c09ff2c.chunk.js": "/prommoto-landing-page/static/js/3.8c09ff2c.chunk.js",
+    "static/js/3.8c09ff2c.chunk.js.map": "/prommoto-landing-page/static/js/3.8c09ff2c.chunk.js.map",
     "index.html": "/prommoto-landing-page/index.html",
-    "static/css/main.17993a24.chunk.css.map": "/prommoto-landing-page/static/css/main.17993a24.chunk.css.map",
-    "static/js/2.f06b5dd5.chunk.js.LICENSE.txt": "/prommoto-landing-page/static/js/2.f06b5dd5.chunk.js.LICENSE.txt",
+    "static/css/main.769957c1.chunk.css.map": "/prommoto-landing-page/static/css/main.769957c1.chunk.css.map",
+    "static/js/2.83ae7dfd.chunk.js.LICENSE.txt": "/prommoto-landing-page/static/js/2.83ae7dfd.chunk.js.LICENSE.txt",
     "static/media/index.scss": "/prommoto-landing-page/static/media/AvenirNextLTPro-UltLt.70a1d4c5.otf",
     "static/media/backCute.4943b624.png": "/prommoto-landing-page/static/media/backCute.4943b624.png",
     "static/media/bottomCar.5764cae3.png": "/prommoto-landing-page/static/media/bottomCar.5764cae3.png",
@@ -23,6 +23,7 @@
     "static/media/earnMoney3.ea8a71c7.png": "/prommoto-landing-page/static/media/earnMoney3.ea8a71c7.png",
     "static/media/fb.dd8d4878.svg": "/prommoto-landing-page/static/media/fb.dd8d4878.svg",
     "static/media/fbLink.a4d247df.svg": "/prommoto-landing-page/static/media/fbLink.a4d247df.svg",
+    "static/media/graphPicMob.f1be045b.svg": "/prommoto-landing-page/static/media/graphPicMob.f1be045b.svg",
     "static/media/growSlide1.453989e8.png": "/prommoto-landing-page/static/media/growSlide1.453989e8.png",
     "static/media/growSlide2.180ec6a8.png": "/prommoto-landing-page/static/media/growSlide2.180ec6a8.png",
     "static/media/growSlide3.38cce06e.png": "/prommoto-landing-page/static/media/growSlide3.38cce06e.png",
@@ -34,15 +35,15 @@
     "static/media/logo4.70540cb5.svg": "/prommoto-landing-page/static/media/logo4.70540cb5.svg",
     "static/media/pathBack.3d7cda06.png": "/prommoto-landing-page/static/media/pathBack.3d7cda06.png",
     "static/media/prommotoLogo.adcaca4c.svg": "/prommoto-landing-page/static/media/prommotoLogo.adcaca4c.svg",
-    "static/media/promoteLeftImg.e5377ed3.png": "/prommoto-landing-page/static/media/promoteLeftImg.e5377ed3.png",
+    "static/media/promoteLeftImg.c9311d3a.png": "/prommoto-landing-page/static/media/promoteLeftImg.c9311d3a.png",
     "static/media/promoteRightImg.df04e8a6.png": "/prommoto-landing-page/static/media/promoteRightImg.df04e8a6.png",
     "static/media/twitter.597f6637.svg": "/prommoto-landing-page/static/media/twitter.597f6637.svg",
     "static/media/twitterLink.e1af853a.svg": "/prommoto-landing-page/static/media/twitterLink.e1af853a.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.97a1399e.js",
-    "static/js/2.f06b5dd5.chunk.js",
-    "static/css/main.17993a24.chunk.css",
-    "static/js/main.d3165758.chunk.js"
+    "static/js/runtime-main.67eb02f4.js",
+    "static/js/2.83ae7dfd.chunk.js",
+    "static/css/main.769957c1.chunk.css",
+    "static/js/main.06f482c7.chunk.js"
   ]
 }
