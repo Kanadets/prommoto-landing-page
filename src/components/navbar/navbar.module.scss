@@ -95,6 +95,34 @@ nav {
         line-height: 22px;
         color: #fff;
         padding: 14px 27px;
+
+        & {
+          overflow: hidden;
+          color: #fff;
+          background-color: $turbo-color;
+          -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
+
+          &:hover {
+            color: $blue-ribbon-color;
+            background-color: $turbo-color;
+          }
+
+          &::before {
+            position: absolute;
+            top: -4px;
+            content: "";
+            background-color: $blue-ribbon-color;
+            width: 113%;
+            height: 110%;
+            left: -10%;
+            transform: skew(30deg);
+            transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+          }
+
+          &:hover::before {
+            transform: translate3d(100%, 0, 0);
+          }
+        }
       }
     }
   }

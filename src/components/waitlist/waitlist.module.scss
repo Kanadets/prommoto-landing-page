@@ -16,16 +16,15 @@
     h2 {
       margin: 0;
       font-weight: bold;
-      font-size: 48px;
-      line-height: 39px;
-      letter-spacing: -1.86393px;
+      font-size: 65.06px;
+      line-height: 78.07px;
       margin-bottom: 20px;
     }
 
     p {
       margin: 0;
-      font-size: 24px;
-      line-height: 150%;
+      font-size: 30.36px;
+      line-height: 45.54px;
 
       span {
         font-weight: bold;
@@ -35,7 +34,7 @@
 
     button {
       margin-top: 75px;
-      font-weight: bold;
+      font-weight: 600;
       font-size: 20px;
       line-height: 34px;
       background-color: $sandy-brown-color;
@@ -44,6 +43,34 @@
       border: none;
       border-radius: 42.5132px;
       cursor: pointer;
+
+      & {
+        overflow: hidden;
+        color: #fff;
+        background-color: $blue-ribbon-color;
+        -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
+
+        &:hover {
+          // color: $sandy-brown-color;
+          background-color: $blue-ribbon-color;
+        }
+
+        &::before {
+          position: absolute;
+          top: -4px;
+          content: "";
+          background-color: $sandy-brown-color;
+          width: 113%;
+          height: 110%;
+          left: -10%;
+          transform: skew(30deg);
+          transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+        }
+
+        &:hover::before {
+          transform: translate3d(100%, 0, 0);
+        }
+      }
     }
   }
 

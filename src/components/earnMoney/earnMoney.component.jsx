@@ -1,5 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import { useMediaQuery } from "react-responsive";
+
+import { CustomButton } from "./earnMoney.styles";
 
 import {
   earnMoneySection,
@@ -17,6 +19,7 @@ import {
   scrollProgressBar,
   headerTextTabMob,
   sections,
+  spanCls,
 } from "./earnMoney.module.scss";
 
 const EarnMoney = ({
@@ -33,56 +36,100 @@ const EarnMoney = ({
   slide3Img,
   mainColor,
   subColor,
+  subBgColor,
+  mainTextColor,
+  subTextColor,
   scrollBg,
   borderColor,
   id,
+  firstStepId,
+  secondStepId,
+  thirdStepId,
 }) => {
-  const [topPos, setTopPos] = useState(0);
-  const [elemHeight, setElemHeight] = useState(0);
-  const [percentages, setPercentages] = useState(0);
   const [scrollProgress, setScrollProgress] = useState("33%");
-  // const [activeImg, setActiveImg] = useState(slide1Img);
-  // const [activeSection, setActiveSection] = useState({
-  //   makeMoney: true,
-  //   ownSchedule: false,
-  //   appLead: false,
-  // });
-
-  // if (scrollProgress <= "33") {
-  //   setActiveImg(slide1Img);
-  // }
-
-  // if (scrollProgress >= "33") {
-  //   setActiveImg(slide2Img);
-  // }
-
-  // if (scrollProgress <= "99") {
-  //   setActiveImg(slide3Img);
-  // }
+  const [slide1Active, setSlide1Active] = useState(true);
+  const [slide2Active, setSlide2Active] = useState(false);
+  const [slide3Active, setSlide3Active] = useState(false);
+  const [activeImg, setActiveImg] = useState(slide1Img);
 
   const isTablet = useMediaQuery({
     query: "(max-width: 1025px)",
   });
 
-  useEffect(() => {
-    const scrollTopPos = document.getElementById(id);
-    setTopPos(scrollTopPos.getBoundingClientRect().top - 505);
-    setElemHeight(scrollTopPos.scrollHeight);
-  }, [id]);
+  const handleScroll = useCallback(() => {
+    const firstStep = document.getElementById(`${firstStepId}`);
+    const secondStep = document.getElementById(`${secondStepId}`);
+    const thirdStep = document.getElementById(`${thirdStepId}`);
 
-  window.addEventListener("scroll", () => {
-    const progress = Math.round(((window.scrollY - topPos) / elemHeight) * 100);
-
-    if (window.scrollY > 2751) {
-      setScrollProgress(`${progress}%`);
-      setPercentages(progress);
-    } else {
+    if (firstStep.getBoundingClientRect().top <= document.body.scrollTop) {
+      setSlide1Active(true);
+      setSlide2Active(false);
+      setSlide3Active(false);
+      setActiveImg(slide1Img);
       setScrollProgress("33%");
     }
-  });
+
+    if (firstStep.getBoundingClientRect().bottom <= document.body.scrollTop) {
+      setSlide1Active(false);
+      setSlide2Active(true);
+      setSlide3Active(false);
+      setActiveImg(slide2Img);
+      setScrollProgress("66%");
+    }
+
+    // if (secondStep.getBoundingClientRect().bottom <= document.body.scrollTop) {
+    //   setSlide1Active(false);
+    //   setSlide2Active(false);
+    //   setSlide3Active(true);
+    //   setActiveImg(slide3Img);
+    //   setScrollProgress("100%");
+    // }
+
+    if (thirdStep.getBoundingClientRect().top <= document.body.scrollTop) {
+      setSlide1Active(false);
+      setSlide2Active(false);
+      setSlide3Active(true);
+      setActiveImg(slide3Img);
+      setScrollProgress("100%");
+    }
+  }, [slide1Img, slide2Img, slide3Img, firstStepId, secondStepId, thirdStepId]);
+
+  useEffect(() => {
+    document.addEventListener("scroll", handleScroll);
+    return () => {
+      document.removeEventListener("scroll", handleScroll);
+    };
+  }, [handleScroll]);
 
   return (
     <section className={earnMoneySection} id={id}>
+      <div
+        style={{
+          height: "50vh",
+          top: "0",
+          position: "absolute",
+          width: "100%",
+        }}
+        id={firstStepId}
+      ></div>
+      <div
+        style={{
+          height: "50vh",
+          top: "30%",
+          position: "absolute",
+          width: "100%",
+        }}
+        id={secondStepId}
+      ></div>
+      <div
+        style={{
+          height: "50vh",
+          top: "55%",
+          position: "absolute",
+          width: "100%",
+        }}
+        id={thirdStepId}
+      ></div>
       {isTablet ? (
         <>
           <div className={headerTextTabMob}>
@@ -138,50 +185,41 @@ const EarnMoney = ({
           <div className={infoTextMainBox}>
             <div className={infoTextBox}>
               <div
-                className={`${InfoText} ${
-                  percentages >= 0 && percentages < 66 ? infoTextActive : ""
-                }`}
+                className={`${InfoText} ${slide1Active && infoTextActive}`}
                 scrollBg
               >
                 <h3>{slide1MainText}</h3>
                 <p>{slide1MainSubText}</p>
               </div>
-              <div
-                className={`${InfoText} ${
-                  percentages >= 66 && percentages < 99 ? infoTextActive : ""
-                }`}
-              >
+              <div className={`${InfoText} ${slide2Active && infoTextActive}`}>
                 <h3>{slide2MainText}</h3>
                 <p>{slide2MainSubText}</p>
               </div>
-              <div
-                className={`${InfoText} ${
-                  percentages >= 99 ? infoTextActive : ""
-                }`}
-              >
+              <div className={`${InfoText} ${slide3Active && infoTextActive}`}>
                 <h3>{slide3MainText}</h3>
                 <p>{slide3MainSubText}</p>
               </div>
               <div className={getEarlyAccess}>
-                <button
-                  style={{ backgroundColor: `${mainColor}`, color: subColor }}
-                  className={`${percentages >= 99 ? "" : unActive}`}
-                >
-                  Get Early Access
-                </button>
-                <span className={`${percentages >= 99 ? unActive : ""}`}>
-                  Join early users list
-                </span>
+                {slide3Active ? (
+                  <CustomButton
+                    mainBgColor={mainColor}
+                    subBgColor={subBgColor}
+                    mainTextColor={mainTextColor}
+                    subTextColor={subTextColor}
+                    // style={{
+                    //   backgroundColor: `${mainColor}`,
+                    //   color: subColor,
+                    // }}
+                  >
+                    <span> Get Early Access</span>
+                  </CustomButton>
+                ) : (
+                  <span className={spanCls}>Join early users list</span>
+                )}
               </div>
             </div>
             <div className={infoImgBox}>
-              {percentages <= 66 ? (
-                <img src={`${slide1Img}`} alt="img" />
-              ) : percentages >= 66 && percentages < 99 ? (
-                <img src={`${slide2Img}`} alt="img" />
-              ) : (
-                <img src={`${slide3Img}`} alt="img" />
-              )}
+              <img src={`${activeImg}`} alt="img" />
             </div>
             <div className={scrollController}>
               <div

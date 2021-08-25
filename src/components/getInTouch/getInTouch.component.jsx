@@ -10,17 +10,20 @@ import {
   progressForm,
   firstSpan,
   secondSpan,
+  resetButton,
 } from "./getInTouch.module.scss";
 
 import backImg from "assets/contactBack.svg";
 
+const initialFormState = {
+  fullName: "",
+  email: "",
+  phoneNum: "",
+};
+
 const GetInTouch = () => {
   const [formStage, setFormStage] = useState(0);
-  const [userCred, setUserCred] = useState({
-    fullName: "",
-    email: "",
-    phoneNum: "",
-  });
+  const [userCred, setUserCred] = useState(initialFormState);
 
   const isTablet = useMediaQuery({
     query: "(max-width: 1025px)",
@@ -96,7 +99,9 @@ const GetInTouch = () => {
                 )}
 
                 {formStage <= 2 && (
-                  <button>{formStage === 2 ? "Send" : "Next"}</button>
+                  <button>
+                    <span>{formStage === 2 ? "Send" : "Next"}</span>
+                  </button>
                 )}
               </>
             ) : (
@@ -123,6 +128,19 @@ const GetInTouch = () => {
                 }`,
               }}
             ></span>
+            {formStage > 2 && (
+              <button
+                className={resetButton}
+                onClick={(event) => {
+                  event.preventDefault();
+
+                  setFormStage(0);
+                  setUserCred(initialFormState);
+                }}
+              >
+                <span>Reset</span>
+              </button>
+            )}
           </div>
         </div>
       </div>

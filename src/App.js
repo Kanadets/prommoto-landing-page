@@ -51,9 +51,15 @@ function App() {
         tincidunt nibh."
         slide3Img={earnMoney3}
         mainColor="#F6555A"
+        subBgColor={"#ffe100"}
+        mainTextColor="#fff"
+        subTextColor="#0043ea"
         scrollBg={"rgba(246, 85, 90, 0.1)"}
         borderColor="#F6555A"
         id="forDrivers"
+        firstStepId={"earnMoneyFirstStep"}
+        secondStepId={"earnMoneySecondStep"}
+        thirdStepId={"earnMoneyThirdStep"}
         // subColor="#fff"
       />
       <Promote />
@@ -72,9 +78,15 @@ function App() {
         slide3Img={earnGrow3}
         mainColor="#FFE100"
         subColor="#0043EA"
+        subBgColor={"#F6555A"}
+        mainTextColor="#0043ea"
+        subTextColor="#fff"
         scrollBg={"rgba(0, 67, 234, 0.1)"}
         borderColor="rgba(0, 67, 234, 0.54)"
         id="forInstallers"
+        firstStepId={"growFirstStep"}
+        secondStepId={"growSecondStep"}
+        thirdStepId={"growThirdStep"}
       />
       <GetInTouch />
       <Footer />

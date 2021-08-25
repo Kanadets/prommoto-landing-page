@@ -3,11 +3,12 @@
 .earnMoneySection {
   scroll-behaviour: smooth;
   margin-top: 200px;
-  height: 420vh;
+  height: 300vh;
   background-color: rgba(233, 235, 241, 0.32);
   display: block;
   padding: 0 50px;
   padding-bottom: 226px;
+  position: relative;
 
   .mainFixedBox {
     position: sticky;
@@ -56,7 +57,7 @@
             cursor: default;
             transition: all 0.2s ease-in-out;
             font-weight: bold;
-            font-size: 48px;
+            font-size: 58px;
             line-height: 60px;
             margin: 0;
             color: $pale-slate-color;
@@ -69,6 +70,7 @@
         }
 
         .infoTextActive {
+          transition: all 0.5s ease-in-out;
           h3 {
             color: #000;
             margin-bottom: 25px;
@@ -77,8 +79,8 @@
           p {
             display: block;
             font-weight: normal;
-            font-size: 20px;
-            line-height: 150%;
+            font-size: 28px;
+            line-height: 42px;
             max-width: 600px;
             margin: 0;
 
@@ -92,7 +94,7 @@
         .getEarlyAccess {
           position: relative;
 
-          span {
+          .spanCls {
             font-weight: 600;
             font-size: 24.5375px;
             line-height: 29px;
@@ -106,28 +108,46 @@
             cursor: default;
           }
 
-          button {
-            position: absolute;
-            left: 0;
-            top: 0;
-            opacity: 100;
-            transition: all 0.2s ease-in-out;
-            font-weight: bold;
-            line-height: 27px;
-            color: #fff;
-            cursor: pointer;
-            z-index: 2;
-            background-color: $carnation-color;
-            border: none;
-            border-radius: 33.8798px;
-            padding: 15px 40px;
-            font-size: 20px;
-          }
+          // button {
+          //   cursor: pointer;
+          //   border: none;
+          //   border-radius: 33.3333px;
+          //   background-color: $blue-ribbon-color;
+          //   font-weight: bold;
+          //   font-size: 13.5227px;
+          //   line-height: 22px;
+          //   color: #fff;
+          //   padding: 14px 27px;
 
-          .unActive {
-            opacity: 0;
-            z-index: 1;
-          }
+          //   & {
+          //     overflow: hidden;
+          //     color: #fff;
+          //     // background-color: $turbo-color;
+          //     -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
+
+          //     &:hover {
+          //       color: $blue-ribbon-color;
+          //       background-color: $turbo-color;
+          //     }
+
+          //     &::before {
+          //       position: absolute;
+          //       top: -4px;
+          //       content: "";
+          //       color: #fff;
+          //       // background-color: $carnation-color;
+          //       width: 113%;
+          //       height: 110%;
+          //       left: -10%;
+          //       transform: skew(30deg);
+          //       transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+          //     }
+
+          //     &:hover::before {
+          //       transform: translate3d(100%, 0, 0);
+          //     }
+          //   }
+          // }
         }
       }
 
@@ -142,6 +162,13 @@
           height: 100%;
           margin: 0 auto;
         }
+
+        // .unActive {
+        //   position: absolute;
+        //   opacity: 0;
+        //   z-index: 1;
+        //   transition: all 0.5s ease-in-out;
+        // }
       }
 
       .scrollController {
@@ -171,7 +198,7 @@
 
         .scrollProgressBar {
           // transition: all 0.1s ease-in-out;
-          transition: all 0.1s linear;
+          transition: all 0.5s linear;
           position: absolute;
           top: 0;
           width: 13px;

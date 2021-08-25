@@ -38,7 +38,9 @@ const Footer = () => {
         <>
           <div className={stayInLoop}>
             <input type="email" placeholder="Enter Email Address" />
-            <button>Stay in the Loop</button>
+            <button>
+              <span>Stay in the Loop</span>
+            </button>
           </div>
         </>
       )}

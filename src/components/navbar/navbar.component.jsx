@@ -81,7 +81,9 @@ const Navbar = () => {
             </a>
           </div>
           <div className={buttonClass}>
-            <button>Get Early Access</button>
+            <button>
+              <span>Get Early Access</span>
+            </button>
           </div>
         </div>
       </div>

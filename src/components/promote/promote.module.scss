@@ -10,11 +10,11 @@
     text-align: center;
 
     h2 {
-      margin-bottom: 9px;
+      margin-bottom: 12px;
       margin-top: 0;
       font-weight: bold;
       font-size: 60px;
-      line-height: 120%;
+      line-height: 72px;
       color: $sandy-brown-color;
     }
 
@@ -47,24 +47,25 @@
 
     .textDiv {
       max-width: 653px;
+
       span {
         font-weight: bold;
-        font-size: 24px;
-        line-height: 120%;
+        font-size: 28px;
+        line-height: 33.6px;
         color: $sandy-brown-color;
       }
 
       h3 {
         margin: 0;
         font-weight: bold;
-        font-size: 35px;
-        line-height: 50px;
+        font-size: 60px;
+        line-height: 72px;
       }
 
       p {
         font-weight: normal;
-        font-size: 20px;
-        line-height: 25px;
+        font-size: 28px;
+        line-height: 39.2px;
         color: $gray-color;
       }
     }
