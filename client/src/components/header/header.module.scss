@@ -1,0 +1,120 @@
+@import "../../lib/colors";
+
+header {
+  height: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background: url("../../assets/cityBack.svg") no-repeat left bottom;
+  background-size: 70%;
+  margin-top: 140px;
+
+  .headerTextContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 40%;
+
+    h1 {
+      margin: 0;
+      font-weight: bold;
+      font-size: 60px;
+      line-height: 120%;
+
+      span {
+        color: $blue-ribbon-color;
+      }
+    }
+
+    p {
+      margin: 0;
+      margin-top: 31px;
+      width: 80%;
+      font-weight: normal;
+      font-size: 20px;
+      line-height: 150%;
+      color: $gray-color;
+    }
+  }
+
+  .headerImgContainer {
+    width: 100%;
+    position: relative;
+    margin-top: 148px;
+
+    .carImgClass {
+      position: relative;
+      display: block;
+      margin: 0 auto;
+      // max-height: 387px;
+      width: 55%;
+      z-index: 5;
+    }
+
+    .roadImgClass {
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      z-index: 1;
+    }
+  }
+}
+
+@media (max-width: 1601px) {
+  header {
+    .headerTextContainer {
+      width: 50%;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  header {
+    margin-top: 50px;
+
+    .headerTextContainer {
+      width: 90%;
+
+      h1 {
+        font-size: 39.7149px;
+      }
+
+      p {
+        font-size: 16px;
+      }
+    }
+
+    .headerImgContainer {
+      .carImgClass {
+        width: 75%;
+      }
+    }
+  }
+}
+
+@media (max-width: 760px) {
+  header {
+    .headerTextContainer {
+      width: 95%;
+
+      h1 {
+        font-size: 32px;
+        line-height: 38px;
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 150%;
+      }
+    }
+
+    .headerImgContainer {
+      .carImgClass {
+        width: 100%;
+      }
+    }
+  }
+}

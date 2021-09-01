@@ -1,0 +1,42 @@
+.partnersLogosSection {
+  margin-top: 125px;
+  width: 100%;
+
+  .logosContainer {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 1601px) {
+  .partnersLogosSection {
+    .logosContainer {
+      width: 90%;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .partnersLogosSection {
+    .logosContainer {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      align-items: center;
+      justify-items: center;
+      gap: 41px;
+    }
+  }
+}
+
+@media (max-width: 760px) {
+  .partnersLogosSection {
+    .logosContainer {
+      img {
+        width: 90%;
+      }
+    }
+  }
+}

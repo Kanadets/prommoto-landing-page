@@ -1,0 +1,331 @@
+@import "../../lib/colors";
+
+.getInTouchSection {
+  position: relative;
+
+  img {
+    width: 100%;
+  }
+  .getInTouchDiv {
+    background-color: #fff;
+    position: absolute;
+    max-height: 899px;
+    width: 90%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    // padding: 90px 260px;
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.06);
+    border-radius: 57px;
+
+    .headerTextTouch {
+      text-align: center;
+      max-width: 876px;
+      span {
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 120%;
+        color: $blue-ribbon-color;
+      }
+
+      h2 {
+        margin: 22px 0;
+        font-weight: bold;
+        font-size: 35px;
+        line-height: 50px;
+      }
+
+      p {
+        margin: 0;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 150%;
+        opacity: 80%;
+      }
+    }
+
+    .formTouchDiv {
+      width: 100%;
+      .formDiv {
+        max-width: 840px;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        p {
+          font-style: normal;
+          font-weight: 500;
+          font-size: 20px;
+          line-height: 150%;
+          margin: 0;
+          margin-bottom: 33px;
+        }
+
+        input {
+          width: 100%;
+          margin: 0;
+          border: none;
+          outline: none;
+          border-bottom: 2px solid #0043ea;
+          padding: 9px 0;
+          font-weight: normal;
+          font-size: 17.4857px;
+          line-height: 22px;
+        }
+
+        button {
+          margin-top: 29px;
+          background-color: $blue-ribbon-color;
+          color: #fff;
+          font-weight: bold;
+          font-size: 20px;
+          line-height: 35px;
+          padding: 10px 40px;
+          max-width: 140px;
+          width: 100%;
+          border: none;
+          border-radius: 38.5873px;
+          cursor: pointer;
+
+          & {
+            overflow: hidden;
+            color: #fff;
+            background-color: $turbo-color;
+            -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
+
+            &:hover {
+              color: $blue-ribbon-color;
+              background-color: $turbo-color;
+            }
+
+            &::before {
+              position: absolute;
+              top: -4px;
+              content: "";
+              background-color: $blue-ribbon-color;
+              width: 113%;
+              height: 110%;
+              left: -10%;
+              transform: skew(30deg);
+              transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+            }
+
+            &:hover::before {
+              transform: translate3d(100%, 0, 0);
+            }
+          }
+        }
+      }
+
+      .progressForm {
+        margin: 0 auto;
+        height: 5px;
+        max-width: 800px;
+        width: 100%;
+        position: relative;
+        margin-top: 136px;
+
+        .firstSpan {
+          position: absolute;
+          background: $blue-ribbon-color;
+          width: 100%;
+          opacity: 0.1;
+          left: 0;
+          height: 4px;
+          border-radius: 5px;
+          z-index: 2;
+        }
+
+        .secondSpan {
+          transition: all 0.1s ease-in-out;
+          position: absolute;
+          background: $blue-ribbon-color;
+          width: 10%;
+          opacity: 100;
+          left: 0;
+          width: 10%;
+          height: 4px;
+          border-radius: 5px;
+          z-index: 3;
+        }
+
+        .resetButton {
+          margin: 0 auto;
+          display: block;
+          margin-top: 25px;
+          position: absolute;
+          left: 0;
+          right: 0;
+
+          background-color: $blue-ribbon-color;
+          color: #fff;
+          font-weight: 600;
+          letter-spacing: 2px;
+          font-size: 20px;
+          line-height: 35px;
+          padding: 10px 40px;
+          max-width: 140px;
+          width: 100%;
+          border: none;
+          border-radius: 38.5873px;
+          cursor: pointer;
+
+          & {
+            overflow: hidden;
+            color: #fff;
+            background-color: $turbo-color;
+            -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
+
+            &:hover {
+              color: $blue-ribbon-color;
+              background-color: $turbo-color;
+            }
+
+            &::before {
+              position: absolute;
+              top: -4px;
+              content: "";
+              background-color: $blue-ribbon-color;
+              width: 113%;
+              height: 110%;
+              left: -10%;
+              transform: skew(30deg);
+              transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+            }
+
+            &:hover::before {
+              transform: translate3d(100%, 0, 0);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1025px) {
+  .getInTouchSection {
+    position: relative;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    img {
+      width: 100%;
+    }
+    .getInTouchDiv {
+      width: 70%;
+      padding: 0 25px;
+
+      .headerTextTouch {
+        text-align: center;
+        max-width: none;
+        width: 100%;
+        span {
+          font-weight: bold;
+          font-size: 24px;
+          line-height: 120%;
+          color: #000;
+          margin-bottom: 17px;
+        }
+
+        h2 {
+          margin: 8px 0;
+          font-size: 54px;
+          color: $blue-ribbon-color;
+        }
+
+        p {
+          font-size: 24px;
+        }
+      }
+
+      .formTouchDiv {
+        width: 100%;
+        .formDiv {
+          max-width: 840px;
+          display: flex;
+          flex-direction: column;
+          margin: 0 auto;
+
+          button {
+            max-width: none;
+            width: 100%;
+            padding: 20px;
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 760px) {
+  .getInTouchSection {
+    position: relative;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    img {
+      width: 100%;
+    }
+    .getInTouchDiv {
+      width: 80%;
+      padding: 0 25px;
+
+      .headerTextTouch {
+        span {
+          display: none;
+        }
+
+        h2 {
+          font-weight: bold;
+          font-size: 28.7299px;
+          line-height: 120%;
+        }
+
+        p {
+          font-weight: normal;
+          font-size: 14.365px;
+          line-height: 150%;
+        }
+      }
+
+      .formTouchDiv {
+        width: 100%;
+
+        .formDiv {
+          max-width: 840px;
+          display: flex;
+          flex-direction: column;
+          margin: 0 auto;
+
+          p {
+            font-weight: 500;
+            font-size: 16.1606px;
+            line-height: 120%;
+          }
+
+          input {
+            font-weight: normal;
+            font-size: 17.7361px;
+            line-height: 120%;
+          }
+
+          button {
+            font-size: 15.2628px;
+            line-height: 19px;
+            text-align: center;
+            letter-spacing: -0.344613px;
+            padding: 11px;
+          }
+        }
+      }
+    }
+  }
+}

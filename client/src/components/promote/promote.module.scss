@@ -1,0 +1,183 @@
+@import "../../lib/colors";
+
+.promoteSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+  .headerText {
+    text-align: center;
+
+    h2 {
+      margin-bottom: 12px;
+      margin-top: 0;
+      font-weight: bold;
+      font-size: 60px;
+      line-height: 72px;
+      color: $sandy-brown-color;
+    }
+
+    p {
+      margin: 0;
+      font-weight: bold;
+      font-size: 28px;
+      line-height: 34px;
+    }
+  }
+
+  .textDivImg {
+    max-width: 1750px;
+    width: 100%;
+    margin-top: 127px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    .imageDiv {
+      max-height: 540px;
+      max-width: 903px;
+
+      img {
+        width: 80%;
+
+        display: block;
+      }
+    }
+
+    .textDiv {
+      max-width: 653px;
+
+      span {
+        font-weight: bold;
+        font-size: 28px;
+        line-height: 33.6px;
+        color: $sandy-brown-color;
+      }
+
+      h3 {
+        margin: 0;
+        font-weight: bold;
+        font-size: 60px;
+        line-height: 72px;
+      }
+
+      p {
+        font-weight: normal;
+        font-size: 28px;
+        line-height: 39.2px;
+        color: $gray-color;
+      }
+    }
+  }
+}
+
+@media (max-width: 1764px) {
+  .promoteSection {
+    .textDivImg {
+      width: 90%;
+
+      .textDiv {
+        span {
+          font-size: 24px;
+        }
+
+        h3 {
+          font-size: 54px;
+        }
+
+        p {
+          font-size: 24px;
+        }
+      }
+
+      .imageDiv {
+        width: 75%;
+      }
+
+      .textDiv {
+        width: 80%;
+      }
+    }
+  }
+}
+
+@media (max-width: 1025px) {
+  .promoteSection {
+    .headerText {
+      h2 {
+        color: $blue-ribbon-color;
+        font-size: 54px;
+      }
+
+      p {
+        font-size: 24px;
+      }
+    }
+
+    .textDivImg {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .textDiv {
+        width: 90%;
+        max-width: none;
+      }
+
+      .imageDiv {
+        width: 90%;
+        margin-top: 45px;
+      }
+    }
+  }
+}
+
+@media (max-width: 760px) {
+  .promoteSection {
+    .headerText {
+      h2 {
+        font-weight: bold;
+        font-size: 32px;
+        line-height: 120%;
+      }
+
+      p {
+        font-weight: 600;
+        font-size: 17px;
+        line-height: 20px;
+      }
+    }
+
+    .textDivImg {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .textDiv {
+        h3 {
+          font-size: 24px;
+          line-height: 120%;
+          text-align: center;
+        }
+
+        p {
+          font-weight: normal;
+          font-size: 16px;
+          line-height: 150%;
+          text-align: center;
+        }
+      }
+
+      .imageDiv {
+        width: 100%;
+        margin-top: 45px;
+        img {
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}
