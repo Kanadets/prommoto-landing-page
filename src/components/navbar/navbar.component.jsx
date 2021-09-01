@@ -55,19 +55,19 @@ const Navbar = () => {
         }`}
       >
         <div className={navbarLinks}>
-          <Link to="/" smooth={true}>
+          <Link to="/" smooth={"smooth"}>
             Home
           </Link>
-          <LinkScroll to="forDrivers" smooth={true}>
+          <LinkScroll to="forDrivers" smooth={"smooth"}>
             Drivers
           </LinkScroll>
-          <LinkScroll to="brands" smooth={true}>
+          <LinkScroll to="brands" smooth={"smooth"}>
             Brands
           </LinkScroll>
-          <LinkScroll to="forInstallers" smooth={true}>
+          <LinkScroll to="forInstallers" smooth={"smooth"}>
             Installers
           </LinkScroll>
-          <LinkScroll to="investors" smooth={true} offset={250}>
+          <LinkScroll to="investors" smooth={"smooth"} offset={250}>
             Investors
           </LinkScroll>
         </div>

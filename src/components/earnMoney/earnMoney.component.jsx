@@ -12,7 +12,7 @@ import {
   InfoText,
   infoTextActive,
   getEarlyAccess,
-  unActive,
+  // unActive,
   infoImgBox,
   scrollController,
   scrollBar,
@@ -59,7 +59,7 @@ const EarnMoney = ({
 
   const handleScroll = useCallback(() => {
     const firstStep = document.getElementById(`${firstStepId}`);
-    const secondStep = document.getElementById(`${secondStepId}`);
+    // const secondStep = document.getElementById(`${secondStepId}`);
     const thirdStep = document.getElementById(`${thirdStepId}`);
 
     if (firstStep.getBoundingClientRect().top <= document.body.scrollTop) {
@@ -70,10 +70,7 @@ const EarnMoney = ({
       setScrollProgress("33%");
     }
 
-    if (
-      firstStep.getBoundingClientRect().bottom <= document.body.scrollTop &&
-      secondStep.getBoundingClientRect().top <= document.body.scrollTop
-    ) {
+    if (firstStep.getBoundingClientRect().bottom <= document.body.scrollTop) {
       setSlide1Active(false);
       setSlide2Active(true);
       setSlide3Active(false);
@@ -89,14 +86,14 @@ const EarnMoney = ({
     //   setScrollProgress("100%");
     // }
 
-    if (secondStep.getBoundingClientRect().bottom <= document.body.scrollTop) {
+    if (thirdStep.getBoundingClientRect().top <= document.body.scrollTop) {
       setSlide1Active(false);
       setSlide2Active(false);
       setSlide3Active(true);
-      setActiveImg(slide3Img);
+      // setActiveImg(slide3Img);
       setScrollProgress("100%");
     }
-  }, [slide1Img, slide2Img, slide3Img, firstStepId, secondStepId, thirdStepId]);
+  }, [slide1Img, slide2Img, firstStepId, thirdStepId]);
 
   useEffect(() => {
     document.addEventListener("scroll", handleScroll);
@@ -189,17 +186,24 @@ const EarnMoney = ({
           <div className={infoTextMainBox}>
             <div className={infoTextBox}>
               <div
+                key="dsadsadsa"
                 className={`${InfoText} ${slide1Active && infoTextActive}`}
                 scrollBg
               >
-                <h3>{slide1MainText}</h3>
+                <h3 key="dsadsa">{slide1MainText}</h3>
                 <p>{slide1MainSubText}</p>
               </div>
-              <div className={`${InfoText} ${slide2Active && infoTextActive}`}>
+              <div
+                key="dsadsafff"
+                className={`${InfoText} ${slide2Active && infoTextActive}`}
+              >
                 <h3>{slide2MainText}</h3>
                 <p>{slide2MainSubText}</p>
               </div>
-              <div className={`${InfoText} ${slide3Active && infoTextActive}`}>
+              <div
+                key="dsadsadsadsa"
+                className={`${InfoText} ${slide3Active && infoTextActive}`}
+              >
                 <h3>{slide3MainText}</h3>
                 <p>{slide3MainSubText}</p>
               </div>
@@ -223,7 +227,11 @@ const EarnMoney = ({
               </div>
             </div>
             <div className={infoImgBox}>
-              <img src={`${activeImg}`} alt="img" className={fadeIn} />
+              {slide3Active ? (
+                <img src={`${slide3Img}`} alt="img" className={fadeIn} />
+              ) : (
+                <img src={`${activeImg}`} alt="img" className={fadeIn} />
+              )}
             </div>
             <div className={scrollController}>
               <div

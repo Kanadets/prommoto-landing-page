@@ -1,6 +1,5 @@
 {
   "name": "prommoto-landing-page",
-  "homepage": "https://kanadets.github.io/prommoto-landing-page/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

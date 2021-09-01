@@ -13,7 +13,7 @@ import earnMoney2 from "assets/earnMoney2.svg";
 import earnMoney3 from "assets/earnMoney3.png";
 import earnGrow1 from "assets/growSlide1.png";
 import earnGrow2 from "assets/growSlide2.png";
-import earnGrow3 from "assets/growSlide3.png";
+import earnGrow3 from "assets/carasd.png";
 
 const HomePage = () => {
   return (
@@ -22,6 +22,7 @@ const HomePage = () => {
       <PartnersLogos />
       <BrandsIndividuals />
       <EarnMoney
+        key={0}
         headerText="Earn Money"
         subHeaderText="For Driving."
         slide1MainText="Make money"
@@ -56,6 +57,7 @@ const HomePage = () => {
       <Promote />
       <Waitlist />
       <EarnMoney
+        key={1}
         headerText="Earn & Grow"
         subHeaderText="For Installers."
         slide1MainText="Grow Your Market"
