@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Link } from "react-scroll";
+import { Link as LinkScroll } from "react-scroll";
+import { Link } from "react-router-dom";
 
 import prommotoLogo from "assets/prommotoLogo.svg";
 import fbLink from "assets/fbLink.svg";
@@ -28,7 +29,9 @@ const Navbar = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
   return (
     <nav>
-      <img src={prommotoLogo} alt="prommoto logo" />
+      <Link to="/">
+        <img src={prommotoLogo} alt="prommoto logo" />
+      </Link>
       <div className={navBurgerMenu} onClick={() => setIsNavOpen(!isNavOpen)}>
         <div
           className={`${burgerMenu} ${upperBurger} ${
@@ -52,21 +55,21 @@ const Navbar = () => {
         }`}
       >
         <div className={navbarLinks}>
-          <Link to="header" smooth={true}>
+          <Link to="/" smooth={true}>
             Home
           </Link>
-          <Link to="forDrivers" smooth={true}>
+          <LinkScroll to="forDrivers" smooth={true}>
             Drivers
-          </Link>
-          <Link to="brands" smooth={true}>
+          </LinkScroll>
+          <LinkScroll to="brands" smooth={true}>
             Brands
-          </Link>
-          <Link to="forInstallers" smooth={true}>
+          </LinkScroll>
+          <LinkScroll to="forInstallers" smooth={true}>
             Installers
-          </Link>
-          <Link to="investors" smooth={true} offset={250}>
+          </LinkScroll>
+          <LinkScroll to="investors" smooth={true} offset={250}>
             Investors
-          </Link>
+          </LinkScroll>
         </div>
         <div className={navbarSocialLinksBtnContainer}>
           <div className={navbarSocialLinks}>

@@ -20,6 +20,7 @@ import {
   headerTextTabMob,
   sections,
   spanCls,
+  fadeIn,
 } from "./earnMoney.module.scss";
 
 const EarnMoney = ({
@@ -69,7 +70,10 @@ const EarnMoney = ({
       setScrollProgress("33%");
     }
 
-    if (firstStep.getBoundingClientRect().bottom <= document.body.scrollTop) {
+    if (
+      firstStep.getBoundingClientRect().bottom <= document.body.scrollTop &&
+      secondStep.getBoundingClientRect().top <= document.body.scrollTop
+    ) {
       setSlide1Active(false);
       setSlide2Active(true);
       setSlide3Active(false);
@@ -85,7 +89,7 @@ const EarnMoney = ({
     //   setScrollProgress("100%");
     // }
 
-    if (thirdStep.getBoundingClientRect().top <= document.body.scrollTop) {
+    if (secondStep.getBoundingClientRect().bottom <= document.body.scrollTop) {
       setSlide1Active(false);
       setSlide2Active(false);
       setSlide3Active(true);
@@ -219,7 +223,7 @@ const EarnMoney = ({
               </div>
             </div>
             <div className={infoImgBox}>
-              <img src={`${activeImg}`} alt="img" />
+              <img src={`${activeImg}`} alt="img" className={fadeIn} />
             </div>
             <div className={scrollController}>
               <div
